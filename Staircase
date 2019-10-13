@@ -1,0 +1,40 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the staircase function below.
+def staircase(n):
+    hashes = 1;
+    case = 0;
+    while case < n:
+         spaces = n - hashes;
+       
+        #print spaces
+         root_space = 0;
+         while root_space < spaces:
+             print(" ",end = "")
+             root_space += 1;
+        #print hashes
+         hash_root = 0;
+         while hash_root < hashes:
+             print("#",end = "")
+             hash_root += 1;
+        ##next line
+           
+         print("\n",end = "")
+         case +=1;
+         hashes = hashes + 1;
+        
+         
+        
+
+
+
+if __name__ == '__main__':
+    n = int(input())
+
+    staircase(n)
