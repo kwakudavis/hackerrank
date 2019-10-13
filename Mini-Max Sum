@@ -1,0 +1,76 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the miniMaxSum function below.
+def miniMaxSum(arr):
+        i=0;
+        max_sum  = 0;
+        new_sum = 0;
+        min_sum  = 0;
+        for n in arr:
+            min_sum = min_sum + n;
+      
+        a = arr[0]
+        b = arr[1]
+        c = arr[2]
+        d = arr[3]
+        e = arr[4]
+       
+
+        while i<5:
+
+                if i==0:
+                   a = 0;
+                else:
+                   a = arr[0]   
+                if i ==1:
+                   b = 0;
+                else:
+                   b= arr[1]   
+                if i ==2:
+                   c =0;
+                else:
+                   c=arr[2]
+                if i==3:
+                   d=0;
+                else:
+                   d = arr[3]    
+                if i ==4:
+                   e=0;   
+                else:
+                    e = arr[4]   
+
+            
+
+                new_sum = a + b + c + d + e;
+        
+                if new_sum > max_sum :
+                    max_sum = new_sum;
+               
+
+                if new_sum < min_sum:
+                    min_sum = new_sum;
+                
+                i =i+ 1; 
+        print(min_sum, end=" ")
+        print(max_sum)
+
+     
+
+
+
+
+
+        
+
+
+
+if __name__ == '__main__':
+    arr = list(map(int, input().rstrip().split()))
+
+    miniMaxSum(arr)
