@@ -1,0 +1,38 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the plusMinus function below.
+def plusMinus(arr):
+ 
+        negatives = 0;
+        positives = 0;
+        nill = 0;
+        for nz in  arr:
+
+            if nz < 0:
+                negatives = negatives + 1;
+
+            elif nz > 0:
+                positives = positives + 1;
+
+            elif nz == 0:
+                nill = nill + 1;
+
+
+        print(positives/n)
+        print(negatives/n)
+        print(nill/n)
+    
+
+
+if __name__ == '__main__':
+    n = int(input())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    plusMinus(arr)
