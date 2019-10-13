@@ -1,0 +1,48 @@
+#!/bin/python3
+
+import os
+import sys
+
+#
+# Complete the timeConversion function below.
+#
+def timeConversion(s):
+    #
+    # Write your code here.
+    #
+    time = s.split(":")
+    hour = time[0]
+    minute = time[1]
+    secondwithZone = time[2]
+    
+    zone = secondwithZone[2] + secondwithZone[3];
+    
+    hs = hour;
+    if hs == "12" and zone == "PM":
+       hs = "12"; 
+        
+    if hs == "12" and zone == "AM":
+       hs = "00";
+
+    if zone == "PM" and  hs != "12" :
+        hs = int(hour) + 12; 
+
+     
+
+ 
+
+
+    hourresult = str(hs)+ ":" + minute + ":" + secondwithZone[0] + secondwithZone[1]
+    return hourresult
+    
+
+if __name__ == '__main__':
+    f = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = timeConversion(s)
+
+    f.write(result + '\n')
+
+    f.close()
